@@ -9,8 +9,18 @@
 <body>
     <div class="container">
         <h2>5-Day Weather Forecast</h2> 
-        <p class="location">Yuma, AZ</p> 
-        <hr> 
+
+        <select id="location-selector">
+            <option value="Yuma, AZ">Yuma, AZ</option>
+            <option value="San Diego, CA">San Diego, CA</option>
+            <option value="Phoenix, AZ">Phoenix, AZ</option>
+        </select>
+
+        <!-- <p id="current-location" class="location">Yuma, AZ</p> <hr>  -->
+         <!-- Removed... seemed redundant with dropdown -->
+
+         <hr> 
+
             <div id="forecast-container">
 
             </div>
