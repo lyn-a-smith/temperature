@@ -1,0 +1,76 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 350px;
+}
+
+h2 { color: #333; margin-bottom: 0.5rem; }
+
+#results {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+/* Advice styling */
+.advice-text {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+/* Updated Thermometer with depth */
+.thermometer-container {
+    width: 50px;
+    height: 200px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.thermometer-tube {
+    width: 14px;
+    height: 150px;
+    background: #eee;
+    border: 3px solid #333;
+    border-radius: 10px 10px 0 0;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.mercury {
+    width: 100%;
+    transition: height 0.8s cubic-bezier(0.17, 0.67, 0.83, 0.67), background-color 0.5s;
+}
+
+.thermometer-bulb {
+    width: 34px;
+    height: 34px;
+    background: #333;
+    border: 3px solid #333;
+    border-radius: 50%;
+    margin: -10px auto 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+#temp-output {
+    font-weight: bold;
+    font-size: 1.4rem; /* Makes the number slightly larger than the label */
+}
