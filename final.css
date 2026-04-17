@@ -1,0 +1,115 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0b192c; 
+    color: #f8fafc;
+    max-width: 550px; 
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    border-bottom: 2px solid #94a3b8; 
+    padding-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 15px;
+    background-color: #1e293b; 
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+li {
+    background: #334155; 
+    margin: 8px 0;
+    padding: 12px 15px;
+    border-radius: 5px;
+    border-left: 5px solid #94a3b8; 
+    
+    /* Default Desktop Grid Layout */
+    display: grid;
+    grid-template-columns: 100px 1fr 100px; 
+    grid-template-areas: "day temp label";
+    align-items: center;
+
+    /* Adds hover effects */
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    cursor: default; /* Optional: change to 'pointer' if you want it to look clickable */
+}
+
+/* The Hover Effect */
+li:hover {
+    background-color: #3f516b; /* Slightly lighter gray-blue */
+    transform: scale(1.02); /* Zooms the row in just a tiny bit */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a shadow behind the floating row */
+    border-left-color: #f8fafc; /* Brightens the accent bar on the left */
+}
+
+/* Assigning Grid Areas */
+.day-name { grid-area: day; text-align: left; }
+.temp-values { grid-area: temp; text-align: center; }
+.label { grid-area: label; text-align: right; }
+
+/* Label Colors */
+.hot {
+    color: #ff8787; 
+    font-weight: bold;
+}
+
+.comfortable {
+    color: #4ade80;
+    font-weight: bold;
+}
+
+.cold {
+    color: #7dd3fc;
+    font-weight: bold;
+}
+
+.stats {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #1e293b; 
+    border-left: 5px solid #94a3b8;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.stats p {
+    margin: 8px 0;
+    font-size: 1.05em;
+}
+
+/* responsive design */
+@media (max-width: 500px) {
+    body {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    li {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "day label"
+            "temp temp";
+        gap: 8px;
+    }
+
+    .day-name { text-align: left; }
+    .label { text-align: right; }
+
+    .temp-values { 
+        text-align: left;
+        font-size: 0.95em;
+        color: #cbd5e1; 
+    }
+
+    .stats p {
+        font-size: 0.95em; 
+    }
+}
